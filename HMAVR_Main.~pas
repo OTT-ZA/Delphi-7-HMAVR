@@ -12,6 +12,7 @@
                 - Add Reboot cmd + command struct
         1.0.6.0 - 04/05/2022 (v1060)
                 - Import and Export of configs to .rax files
+                - Add Corr. Fact to config
         1.0.7.0 - 07/09/2022 (v1070)
                 - Add tab for adv settings
                 - Add new radar config settings + cmd
@@ -143,6 +144,8 @@ type
     Label20: TLabel;
     seDecDig: TSpinEdit;
     btnHWConfig: TBitBtn;
+    Label21: TLabel;
+    seCorrFactor: TSpinEdit;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -1549,6 +1552,7 @@ begin
   radarConfig.PWM_S_max := seMaxSpeed.Value*1000;
   radarConfig.PWM_Offset := seOffset.Value;
 
+  radarConfig.speed_Corr_Factor := seCorrFactor.Value;//V1060 - populate speed corr fac in config
   for i := 0 to (sizeof(radarConfig.dummy)-1) do
     radarConfig.dummy[i] := '0';
 
@@ -2252,6 +2256,8 @@ begin
            seMaxSpeed.Value := ROUND(tmpConfig.PWM_S_max/1000);
            seOffset.Value := tmpConfig.PWM_Offset;
 
+           seCorrFactor.Value := tmpConfig.speed_Corr_Factor;
+
            if grpPWM.Enabled then
            begin
              cbDynClick(Sender);
@@ -2333,6 +2339,8 @@ begin
   radarConfig.PWM_S_min := seMinSpeed.Value*1000;
   radarConfig.PWM_S_max := seMaxSpeed.Value*1000;
   radarConfig.PWM_Offset := seOffset.Value;
+
+  radarConfig.speed_Corr_Factor := seCorrFactor.Value;
 
   for i := 0 to (sizeof(radarConfig.dummy)-1) do
     radarConfig.dummy[i] := '0';

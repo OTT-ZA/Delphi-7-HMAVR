@@ -1552,7 +1552,6 @@ begin
   radarConfig.PWM_S_max := seMaxSpeed.Value*1000;
   radarConfig.PWM_Offset := seOffset.Value;
 
-  radarConfig.speed_Corr_Factor := seCorrFactor.Value;//V1060 - populate speed corr fac in config
   for i := 0 to (sizeof(radarConfig.dummy)-1) do
     radarConfig.dummy[i] := '0';
 
@@ -2256,8 +2255,6 @@ begin
            seMaxSpeed.Value := ROUND(tmpConfig.PWM_S_max/1000);
            seOffset.Value := tmpConfig.PWM_Offset;
 
-           seCorrFactor.Value := tmpConfig.speed_Corr_Factor;
-
            if grpPWM.Enabled then
            begin
              cbDynClick(Sender);
@@ -2339,8 +2336,6 @@ begin
   radarConfig.PWM_S_min := seMinSpeed.Value*1000;
   radarConfig.PWM_S_max := seMaxSpeed.Value*1000;
   radarConfig.PWM_Offset := seOffset.Value;
-
-  radarConfig.speed_Corr_Factor := seCorrFactor.Value;
 
   for i := 0 to (sizeof(radarConfig.dummy)-1) do
     radarConfig.dummy[i] := '0';

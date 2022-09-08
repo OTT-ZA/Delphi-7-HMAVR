@@ -981,7 +981,7 @@ object frmMain: TfrmMain
       Top = 0
       Width = 555
       Height = 445
-      ActivePage = TabSheet1
+      ActivePage = tbAdvanced
       Align = alClient
       TabOrder = 1
       object TabSheet1: TTabSheet
@@ -1506,21 +1506,28 @@ object frmMain: TfrmMain
           Caption = 'Advanced Configuration'
           TabOrder = 0
           object Label5: TLabel
-            Left = 19
+            Left = 13
             Top = 25
             Width = 95
             Height = 13
             Caption = 'Trace Trending (ms)'
           end
           object Label3: TLabel
-            Left = 299
+            Left = 178
             Top = 25
-            Width = 137
+            Width = 105
             Height = 13
-            Caption = 'Radar Reading Average (ms)'
+            Caption = 'Reading Average (ms)'
+          end
+          object Label21: TLabel
+            Left = 352
+            Top = 25
+            Width = 109
+            Height = 13
+            Caption = 'Corr. Factor  (*10000)'
           end
           object seTrendMS: TSpinEdit
-            Left = 120
+            Left = 114
             Top = 22
             Width = 51
             Height = 22
@@ -1530,7 +1537,7 @@ object frmMain: TfrmMain
             Value = 3000
           end
           object seAvgMS: TSpinEdit
-            Left = 444
+            Left = 289
             Top = 22
             Width = 51
             Height = 22
@@ -1538,6 +1545,16 @@ object frmMain: TfrmMain
             MinValue = 500
             TabOrder = 1
             Value = 1000
+          end
+          object seCorrFactor: TSpinEdit
+            Left = 460
+            Top = 22
+            Width = 55
+            Height = 22
+            MaxValue = 15000
+            MinValue = 5000
+            TabOrder = 2
+            Value = 10353
           end
         end
         object grpPWM: TGroupBox
@@ -1703,7 +1720,7 @@ object frmMain: TfrmMain
             Left = 10
             Top = 49
             Width = 113
-            Height = 12
+            Height = 13
             Caption = 'Detection Sensitivity (%)'
           end
           object Label19: TLabel

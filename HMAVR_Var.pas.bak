@@ -176,8 +176,7 @@ type
     PWM_S_max : SmallInt;
     PWM_S_static, //if ch is not dyn, then use this value = kph*1000
     PWM_Offset : LongInt; //def 2500 mA offset tp alogh to points (2.58*1000)
-    speed_Corr_Factor : Word;  //correction factor(*10 000) for angle of the reader head
-    dummy : Array[0..24] of AnsiChar;
+    dummy : Array[0..26] of AnsiChar;
     CRC16 : Word;
   end;
 
