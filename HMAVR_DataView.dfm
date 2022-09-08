@@ -1,0 +1,499 @@
+object frmDataView: TfrmDataView
+  Left = 417
+  Top = 84
+  Width = 870
+  Height = 600
+  Caption = 'Data View'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 862
+    Height = 573
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = ' '
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 862
+      Height = 29
+      Align = alTop
+      Caption = ' '
+      TabOrder = 0
+      object dbcbxSites: TDBLookupComboBox
+        Left = 10
+        Top = 4
+        Width = 145
+        Height = 21
+        KeyField = 'Site_ID'
+        ListField = 'Site_Name'
+        ListSource = DataModule1.dsSites
+        TabOrder = 0
+        OnCloseUp = dbcbxSitesCloseUp
+      end
+    end
+    object PageControl1: TPageControl
+      Left = 0
+      Top = 29
+      Width = 862
+      Height = 544
+      ActivePage = TabSheet1
+      Align = alClient
+      TabOrder = 1
+      object TabSheet1: TTabSheet
+        Caption = 'Alerts'
+        object grdAlerts: TtsDBGrid
+          Tag = 3
+          Left = 0
+          Top = 0
+          Width = 854
+          Height = 161
+          Align = alClient
+          AlwaysShowFocus = True
+          AutoInsert = False
+          CellSelectMode = cmNone
+          CheckBoxStyle = stCheck
+          Cols = 13
+          DatasetType = dstStandard
+          DataSource = dsAlerts
+          DefaultRowHeight = 16
+          ExactRowCount = True
+          ExportDelimiter = ','
+          FieldState = fsCustomized
+          FocusColor = clAqua
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          GridMode = gmBrowse
+          HeadingHorzAlignment = htaCenter
+          HeadingFont.Charset = ANSI_CHARSET
+          HeadingFont.Color = clBlue
+          HeadingFont.Height = -11
+          HeadingFont.Name = 'Tahoma'
+          HeadingFont.Style = [fsBold]
+          HeadingHeight = 45
+          HeadingParentFont = False
+          HeadingVertAlignment = vtaCenter
+          ParentFont = False
+          ParentShowHint = False
+          PrintOrientation = pmPortrait
+          RowChangedIndicator = riAutoReset
+          ShowHint = False
+          TabOrder = 0
+          Version = '3.01.08'
+          WordWrap = wwOff
+          XMLExport.Version = '1.0'
+          XMLExport.DataPacketVersion = '2.0'
+          DataBound = True
+          ColProperties = <
+            item
+              DataCol = 1
+              FieldName = 'Alert_Time'
+              Col.FieldName = 'Alert_Time'
+              Col.Heading = 'Alert Date'
+              Col.ReadOnly = True
+              Col.HorzAlignment = htaLeft
+              Col.Width = 145
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 2
+              FieldName = 'Direction'
+              Col.FieldName = 'Direction'
+              Col.Heading = 'Direction'
+              Col.ReadOnly = True
+              Col.HorzAlignment = htaLeft
+              Col.Width = 69
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 3
+              FieldName = 'Vehicle_Idx'
+              Col.FieldName = 'Vehicle_Idx'
+              Col.Heading = 'Vehicle Idx'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 4
+              FieldName = 'Wagon_No'
+              Col.FieldName = 'Wagon_No'
+              Col.Heading = 'Wagon No'
+              Col.HorzAlignment = htaLeft
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 5
+              FieldName = 'Overload_Value'
+              Col.FieldName = 'Overload_Value'
+              Col.Heading = 'Overload Value'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 6
+              FieldName = 'Underload_Value'
+              Col.FieldName = 'Underload_Value'
+              Col.Heading = 'Underload Value'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 7
+              FieldName = 'Axle_Value'
+              Col.FieldName = 'Axle_Value'
+              Col.Heading = 'Axle Value'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 8
+              FieldName = 'Skew_Value_Bogie'
+              Col.FieldName = 'Skew_Value_Bogie'
+              Col.Heading = 'Skew Value (Bogie)'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 9
+              FieldName = 'Skew_Value_Lateral'
+              Col.FieldName = 'Skew_Value_Lateral'
+              Col.Heading = 'Skew Value (Lateral)'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 10
+              FieldName = 'Axle_Number'
+              Col.FieldName = 'Axle_Number'
+              Col.Heading = 'Axle No'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 11
+              FieldName = 'Loaded_End'
+              Col.FieldName = 'Loaded_End'
+              Col.Heading = 'Loaded End'
+              Col.HorzAlignment = htaLeft
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 12
+              FieldName = 'Loaded_Side'
+              Col.FieldName = 'Loaded_Side'
+              Col.Heading = 'Loaded Side'
+              Col.HorzAlignment = htaLeft
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 13
+              FieldName = 'Alert_Type_Desc'
+              Col.FieldName = 'Alert_Type_Desc'
+              Col.Heading = 'Alert Type'
+              Col.MaxLength = 75
+              Col.HorzAlignment = htaLeft
+              Col.Width = 250
+              Col.AssignedValues = '?'
+            end>
+        end
+        object Panel3: TPanel
+          Left = 0
+          Top = 161
+          Width = 854
+          Height = 355
+          Align = alBottom
+          Caption = ' '
+          TabOrder = 1
+          object Image1: TImage
+            Left = 2
+            Top = 2
+            Width = 533
+            Height = 351
+            Stretch = True
+          end
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Trains'
+        ImageIndex = 1
+        object grdTrainHeader: TtsDBGrid
+          Tag = 3
+          Left = 0
+          Top = 0
+          Width = 854
+          Height = 516
+          Align = alClient
+          AlwaysShowFocus = True
+          AutoInsert = False
+          CellSelectMode = cmNone
+          CheckBoxStyle = stCheck
+          Cols = 5
+          DatasetType = dstStandard
+          DataSource = dsTrains
+          DefaultRowHeight = 16
+          ExactRowCount = True
+          ExportDelimiter = ','
+          FieldState = fsCustomized
+          FocusColor = clAqua
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          GridMode = gmBrowse
+          HeadingHorzAlignment = htaCenter
+          HeadingFont.Charset = ANSI_CHARSET
+          HeadingFont.Color = clBlue
+          HeadingFont.Height = -11
+          HeadingFont.Name = 'Tahoma'
+          HeadingFont.Style = [fsBold]
+          HeadingHeight = 34
+          HeadingParentFont = False
+          HeadingVertAlignment = vtaCenter
+          ParentFont = False
+          ParentShowHint = False
+          PrintOrientation = pmPortrait
+          RowChangedIndicator = riAutoReset
+          ShowHint = False
+          TabOrder = 0
+          Version = '3.01.08'
+          WordWrap = wwOff
+          XMLExport.Version = '1.0'
+          XMLExport.DataPacketVersion = '2.0'
+          DataBound = True
+          ColProperties = <
+            item
+              DataCol = 1
+              FieldName = 'Post_Date'
+              Col.FieldName = 'Post_Date'
+              Col.Heading = 'Train Date'
+              Col.ReadOnly = True
+              Col.HorzAlignment = htaLeft
+              Col.Width = 145
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 2
+              FieldName = 'Direction'
+              Col.FieldName = 'Direction'
+              Col.Heading = 'Direction'
+              Col.ReadOnly = True
+              Col.HorzAlignment = htaLeft
+              Col.Width = 69
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 3
+              FieldName = 'Wagon_Count'
+              Col.FieldName = 'Wagon_Count'
+              Col.Heading = 'Vehicles'
+              Col.ReadOnly = True
+              Col.HorzAlignment = htaRight
+              Col.PrintTotals = True
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 4
+              FieldName = 'Alarm_Count'
+              Col.FieldName = 'Alarm_Count'
+              Col.Heading = 'Alarms'
+              Col.HorzAlignment = htaRight
+              Col.AssignedValues = '?'
+            end
+            item
+              DataCol = 5
+              FieldName = 'Meas_Res_Desc'
+              Col.FieldName = 'Meas_Res_Desc'
+              Col.Heading = 'Meas. Result'
+              Col.MaxLength = 15
+              Col.HorzAlignment = htaLeft
+              Col.Width = 130
+              Col.AssignedValues = '?'
+            end>
+        end
+      end
+    end
+  end
+  object qryAlerts: TADOQuery
+    Connection = DataModule1.ADOConnection1
+    CursorType = ctStatic
+    OnCalcFields = qryAlertsCalcFields
+    Parameters = <
+      item
+        Name = 'SiteID'
+        Attributes = [paNullable]
+        DataType = ftWideString
+        NumericScale = 255
+        Precision = 255
+        Size = 510
+        Value = '1'
+      end
+      item
+        Name = 'AlertTime'
+        Attributes = [paNullable]
+        DataType = ftWideString
+        NumericScale = 255
+        Precision = 255
+        Size = 510
+        Value = '2012-06-25'
+      end>
+    SQL.Strings = (
+      'SELECT * FROM Alerts'
+      'WHERE Site_ID=:SiteID'
+      'AND Alert_Time>:AlertTime')
+    Left = 14
+    Top = 168
+    object qryAlertsAlert_ID: TAutoIncField
+      FieldName = 'Alert_ID'
+      ReadOnly = True
+    end
+    object qryAlertsSite_ID: TIntegerField
+      FieldName = 'Site_ID'
+    end
+    object qryAlertsSeq_No: TIntegerField
+      FieldName = 'Seq_No'
+    end
+    object qryAlertsAlert_Time: TDateTimeField
+      FieldName = 'Alert_Time'
+    end
+    object qryAlertsDirection: TWideStringField
+      FieldName = 'Direction'
+      Size = 8
+    end
+    object qryAlertsVehicle_Idx: TIntegerField
+      FieldName = 'Vehicle_Idx'
+    end
+    object qryAlertsWagon_No: TWideStringField
+      FieldName = 'Wagon_No'
+      Size = 10
+    end
+    object qryAlertsAlarm_Type: TWordField
+      FieldName = 'Alarm_Type'
+    end
+    object qryAlertsOverload_Value: TSmallintField
+      FieldName = 'Overload_Value'
+    end
+    object qryAlertsUnderload_Value: TSmallintField
+      FieldName = 'Underload_Value'
+    end
+    object qryAlertsAxle_Value: TSmallintField
+      FieldName = 'Axle_Value'
+    end
+    object qryAlertsSkew_Value_Bogie: TSmallintField
+      FieldName = 'Skew_Value_Bogie'
+    end
+    object qryAlertsSkew_Value_Lateral: TSmallintField
+      FieldName = 'Skew_Value_Lateral'
+    end
+    object qryAlertsAxle_Number: TWordField
+      FieldName = 'Axle_Number'
+    end
+    object qryAlertsLoaded_End: TWideStringField
+      FieldName = 'Loaded_End'
+      Size = 1
+    end
+    object qryAlertsLoaded_Side: TWideStringField
+      FieldName = 'Loaded_Side'
+      Size = 1
+    end
+    object qryAlertsPhoto: TBlobField
+      FieldName = 'Photo'
+    end
+    object qryAlertsAlert_Type_Desc: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Alert_Type_Desc'
+      Size = 75
+      Calculated = True
+    end
+  end
+  object dsAlerts: TDataSource
+    DataSet = qryAlerts
+    OnDataChange = dsAlertsDataChange
+    Left = 60
+    Top = 169
+  end
+  object qryTrains: TADOQuery
+    Connection = DataModule1.ADOConnection1
+    CursorType = ctStatic
+    OnCalcFields = qryTrainsCalcFields
+    Parameters = <
+      item
+        Name = 'SiteID'
+        Attributes = [paNullable]
+        DataType = ftWideString
+        NumericScale = 255
+        Precision = 255
+        Size = 510
+        Value = '1'
+      end
+      item
+        Name = 'PostDate'
+        Attributes = [paNullable]
+        DataType = ftWideString
+        NumericScale = 255
+        Precision = 255
+        Size = 510
+        Value = '2012-06-25'
+      end>
+    SQL.Strings = (
+      'SELECT * FROM Trains'
+      'WHERE Site_ID=:SiteID'
+      'AND Post_Date>:PostDate')
+    Left = 16
+    Top = 208
+    object qryTrainsMessage_ID: TAutoIncField
+      FieldName = 'Message_ID'
+      ReadOnly = True
+    end
+    object qryTrainsSite_ID: TIntegerField
+      FieldName = 'Site_ID'
+    end
+    object qryTrainsPost_Date: TDateTimeField
+      FieldName = 'Post_Date'
+    end
+    object qryTrainsWagon_Count: TIntegerField
+      FieldName = 'Wagon_Count'
+    end
+    object qryTrainsAlarm_Count: TIntegerField
+      FieldName = 'Alarm_Count'
+    end
+    object qryTrainsDirection: TWideStringField
+      FieldName = 'Direction'
+      Size = 8
+    end
+    object qryTrainsMeas_Result: TWordField
+      FieldName = 'Meas_Result'
+    end
+    object qryTrainsMeas_Res_Desc: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'Meas_Res_Desc'
+      Size = 15
+      Calculated = True
+    end
+  end
+  object dsTrains: TDataSource
+    DataSet = qryTrains
+    Left = 60
+    Top = 209
+  end
+end

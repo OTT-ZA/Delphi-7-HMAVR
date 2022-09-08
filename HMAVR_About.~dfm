@@ -1,0 +1,217 @@
+object AboutBox: TAboutBox
+  Left = 446
+  Top = 128
+  BorderStyle = bsDialog
+  Caption = 'About'
+  ClientHeight = 165
+  ClientWidth = 409
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClick = FormClick
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 7
+    Top = 251
+    Width = 34
+    Height = 13
+    Caption = 'E-mail: '
+  end
+  object Label3: TLabel
+    Left = 7
+    Top = 264
+    Width = 29
+    Height = 13
+    Caption = 'Web: '
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 409
+    Height = 165
+    Align = alClient
+    BevelWidth = 2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnClick = FormClick
+    object Label2: TLabel
+      Left = 8
+      Top = 127
+      Width = 35
+      Height = 13
+      Caption = 'E-mail: '
+    end
+    object lblEmail: TLabel
+      Left = 46
+      Top = 127
+      Width = 138
+      Height = 13
+      Cursor = crHandPoint
+      Hint = 'mailto:info@binary-technology.com'
+      Caption = 'info@binary-technology.com'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      OnClick = lblEmailClick
+    end
+    object Label4: TLabel
+      Left = 8
+      Top = 140
+      Width = 29
+      Height = 13
+      Caption = 'Web: '
+    end
+    object lblWeb: TLabel
+      Left = 40
+      Top = 140
+      Width = 138
+      Height = 13
+      Cursor = crHandPoint
+      Hint = 'http://www.binary-technology.com'
+      Caption = 'www.binary-technology.com'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      OnClick = lblEmailClick
+    end
+    object Label5: TLabel
+      Left = 121
+      Top = 7
+      Width = 181
+      Height = 13
+      Caption = 'HMA-VR Configuration Interface'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = FormClick
+    end
+    object Label6: TLabel
+      Left = 113
+      Top = 22
+      Width = 201
+      Height = 13
+      Caption = 'Legal Copyright: On-Track Technology CC'
+      OnClick = FormClick
+    end
+    object lblFileVersion: TLabel
+      Left = 164
+      Top = 37
+      Width = 58
+      Height = 13
+      Caption = 'File Version:'
+      OnClick = FormClick
+    end
+    object lblFileDate: TLabel
+      Left = 137
+      Top = 52
+      Width = 49
+      Height = 13
+      Caption = 'lblFileDate'
+    end
+    object Label7: TLabel
+      Left = 260
+      Top = 127
+      Width = 35
+      Height = 13
+      Caption = 'E-mail: '
+    end
+    object Label8: TLabel
+      Left = 260
+      Top = 140
+      Width = 29
+      Height = 13
+      Caption = 'Web: '
+    end
+    object Label9: TLabel
+      Left = 298
+      Top = 127
+      Width = 99
+      Height = 13
+      Cursor = crHandPoint
+      Hint = 'mailto:info@hmagroup.com'
+      Caption = 'info@hmagroup.com'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      OnClick = lblEmailClick
+    end
+    object Label10: TLabel
+      Left = 292
+      Top = 140
+      Width = 87
+      Height = 13
+      Cursor = crHandPoint
+      Hint = 'https://hmagrp.com'
+      Caption = 'www.hmagrp.com'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      OnClick = lblEmailClick
+    end
+    object Memo1: TMemo
+      Left = 5
+      Top = 88
+      Width = 215
+      Height = 39
+      TabStop = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      Color = clBtnFace
+      Lines.Strings = (
+        'On-Track Technology CC, South Africa'
+        'Tel: +27 (0) 87 550 1050'
+        'Fax:+27 (0) 86 599 2900 '
+        ''
+        '')
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Memo2: TMemo
+      Left = 257
+      Top = 88
+      Width = 150
+      Height = 39
+      TabStop = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      Color = clBtnFace
+      Lines.Strings = (
+        'Halley Mellows Australia'
+        'Tel: +61 2 4389 6191'
+        'Fax: +61 2 4389 6199'
+        ''
+        '')
+      ReadOnly = True
+      TabOrder = 1
+    end
+  end
+end
