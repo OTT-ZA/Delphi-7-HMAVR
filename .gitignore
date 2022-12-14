@@ -50,3 +50,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+HMA_VR.~dsk
+HMA_VR.dsk
